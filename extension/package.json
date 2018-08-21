@@ -1,0 +1,60 @@
+{
+    "name": "vscode-wiki-fs",
+    "displayName": "Wiki FileSystem",
+    "description": "Access a wiki as workspace folder.",
+    "version": "0.0.1",
+    "publisher": "ego-digital",
+    "engines": {
+        "vscode": "^1.26.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "keywords": [
+        "Wiki",
+        "REST",
+        "API",
+        "Workspace",
+        "Folder",
+        "multi-root ready"
+    ],
+    "activationEvents": [
+        "onCommand:extension.sayHello"
+    ],
+    "main": "./out/extension",
+    "contributes": {
+        "commands": [
+            {
+                "command": "extension.sayHello",
+                "title": "Hello World"
+            }
+        ]
+    },
+    "scripts": {
+        "vscode:prepublish": "npm run compile",
+        "compile": "tsc -p ./",
+        "watch": "tsc -watch -p ./",
+        "postinstall": "node ./node_modules/vscode/bin/install",
+        "test": "npm run compile && node ./node_modules/vscode/bin/test"
+    },
+    "devDependencies": {
+        "typescript": "^2.6.1",
+        "vscode": "^1.1.21",
+        "tslint": "^5.8.0",
+        "@types/node": "^8.10.25",
+        "@types/mocha": "^2.2.42"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/egodigital/vscode-wiki-fs.git"
+    },
+    "readmeFilename": "README.md",
+    "license": "LGPL-3.0",
+    "bugs": {
+        "url": "https://github.com/egodigital/vscode-wiki-fs/issues"
+    },
+    "homepage": "https://github.com/egodigital/vscode-wiki-fs#readme",
+    "dependencies": {
+        "vscode-helpers": "^2.12.0"
+    }
+}

@@ -1,0 +1,7 @@
+/extension/out
+/extension/node_modules
+/extension/.vscode-test/
+/extension/*.vsix
+/extension/node_modules
+/server/lib
+/server/node_modules

@@ -1,0 +1,2 @@
+Icons:
+    - /icon.png (DryIcons; https://dryicons.com/)

@@ -1,0 +1,12 @@
+{
+    "folders": [
+        {
+            "name": "VSCode Extension",
+            "path": "./extension"
+        },
+        {
+            "name": "Wiki Server",
+            "path": "./server"
+        }
+    ]
+}
