@@ -1,65 +1,37 @@
-# vscode-wiki-fs README
+# vscode-wiki-fs
 
-This is the README for your extension "vscode-wiki-fs". After writing up a brief description, we recommend including the following sections.
+[![Latest Release](https://vsmarketplacebadge.apphb.com/version-short/ego-digital.vscode-wiki-fs.svg)](https://marketplace.visualstudio.com/items?itemName=ego-digital.vscode-wiki-fs)
+[![Installs](https://vsmarketplacebadge.apphb.com/installs/ego-digital.vscode-wiki-fs.svg)](https://marketplace.visualstudio.com/items?itemName=ego-digital.vscode-wiki-fs)
+[![Rating](https://vsmarketplacebadge.apphb.com/rating-short/ego-digital.vscode-wiki-fs.svg)](https://marketplace.visualstudio.com/items?itemName=ego-digital.vscode-wiki-fs#review-details)
 
-## Features
+[Visual Studio Code](https://code.visualstudio.com/) extension, which accesses wikis as a [workspace folder]().
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+## Table of contents
 
-For example if there is an image subfolder under your extension project workspace:
+1. [Install](#install-)
+2. [Support and contribute](#support-and-contribute-)
 
-\!\[feature X\]\(images/feature-x.png\)
+## Install [[&uarr;](#table-of-contents)]
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+Launch VS Code Quick Open (`Ctrl + P`), paste the following command, and press enter:
 
-## Requirements
+```bash
+ext install vscode-wiki-fs
+```
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+Or search for things like `vscode-wiki-fs` in your editor.
 
-## Extension Settings
+## Support and contribute [[&uarr;](#table-of-contents)]
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+You are very welcome to contribute by [opening an issue](https://github.com/egodigital/vscode-wiki-fs/issues) and/or fork this repository.
 
-For example:
+To work with the code:
 
-This extension contributes the following settings:
+* clone [this repository](https://github.com/egodigital/vscode-wiki-fs)
+* create and change to a new branch, like `git checkout -b my_new_feature`
+* run `npm install` from your project folder
+* open that project folder in Visual Studio Code
+* now you can edit and debug there
+* commit your changes to your new branch and sync it with your forked GitHub repo
+* make a [pull request](https://github.com/egodigital/vscode-wiki-fs/pulls)
 
-* `myExtension.enable`: enable/disable this extension
-* `myExtension.thing`: set to `blah` to do something
-
-## Known Issues
-
-Calling out known issues can help limit users opening duplicate issues against your extension.
-
-## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
------------------------------------------------------------------------------------------------------------
-
-## Working with Markdown
-
-**Note:** You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux)
-* Toggle preview (`Shift+CMD+V` on macOS or `Shift+Ctrl+V` on Windows and Linux)
-* Press `Ctrl+Space` (Windows, Linux) or `Cmd+Space` (macOS) to see a list of Markdown snippets
-
-### For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**

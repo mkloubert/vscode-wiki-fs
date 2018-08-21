@@ -1,6 +1,6 @@
 /**
  * This file is part of the vscode-wiki-fs distribution.
- * Copyright (c) e.GO Digital GmbH, Aachen, Germany (http://www.e-go-digital.com/)
+ * Copyright (c) e.GO Digital GmbH, Aachen, Germany (https://www.e-go-digital.com/)
  *
  * vscode-wiki-fs is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Lesser General Public License as
