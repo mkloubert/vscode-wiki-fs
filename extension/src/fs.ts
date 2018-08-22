@@ -16,7 +16,6 @@
  */
 
 import * as ego_wikifs from './extension';
-import * as ego_wikifs_src_workspace from './sources/workspace';
 import * as vscode from 'vscode';
 import * as vscode_helpers from 'vscode-helpers';
 
@@ -173,7 +172,7 @@ export class WikiFileSystemProvider extends FileSystemBase {
                 case 'project':
                 case 'workspace':
                 case 'ws':
-                    provider = new ego_wikifs_src_workspace.WorkspaceWikiSource(
+                    provider = new (require('./sources/workspace').WorkspaceWikiSource)(
                         this.extension, uri,
                     );
                     break;
@@ -256,7 +255,7 @@ export class WikiFileSystemProvider extends FileSystemBase {
 
     private async withUri<TResult = any>(
         uri: vscode.Uri,
-        action: (provider: vscode.FileSystemProvider) => TResult | PromiseLike<TResult>
+        action: (provider: vscode.FileSystemProvider) => TResult | PromiseLike<TResult>,
     ): Promise<TResult> {
         try {
             const PROVIDER = await this.getProviderByUri(uri);

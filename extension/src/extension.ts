@@ -19,7 +19,7 @@
 
 import * as _ from 'lodash';
 import * as ego_wikifs_fs from './fs';
-import * as fs from 'fs';
+import * as fsExtra from 'fs-extra';
 import * as os from 'os';
 import * as path from 'path';
 import * as vscode from 'vscode';
@@ -81,7 +81,26 @@ export async function activate(context: vscode.ExtensionContext) {
             outputChannel.append("    Register 'wiki' file system scheme ... ");
 
             ego_wikifs_fs.WikiFileSystemProvider.register(
-                context
+                extension
+            );
+
+            outputChannel.appendLine('[OK]');
+        } catch (e) {
+            outputChannel.appendLine(`[ERROR: '${ vscode_helpers.toStringSafe(e) }']`);
+        }
+    });
+
+    WF.next(() => {
+        try {
+            outputChannel.append("    Register text editor watcher ... ");
+
+            extension.subscriptions.push(
+                vscode.workspace.onDidOpenTextDocument((e) => {
+                    onDidOpenTextDocument(e).then(() => {
+                    }, (err) => {
+                        // TODO: log
+                    });
+                }),
             );
 
             outputChannel.appendLine('[OK]');
@@ -153,7 +172,7 @@ export function getUriParams(uri: vscode.Uri): KeyValuePairs<string> {
 
         APPLY_PARAMS(
             JSON.parse(
-                fs.readFileSync(paramsFile, 'utf8')
+                fsExtra.readFileSync(paramsFile, 'utf8')
             )
         );
     }
@@ -162,6 +181,16 @@ export function getUriParams(uri: vscode.Uri): KeyValuePairs<string> {
     delete PARAMS[ KEY_PARAMS ];
 
     return PARAMS;
+}
+
+async function onDidOpenTextDocument(doc: vscode.TextDocument) {
+    if (!doc.uri) {
+        return;
+    }
+
+    if ('wiki' !== vscode_helpers.normalizeString(doc.uri.scheme)) {
+        return;
+    }
 }
 
 /**
